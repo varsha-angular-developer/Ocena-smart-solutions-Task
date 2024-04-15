@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <form [formGroup]="userForm" class="mt-4 border p-3 custom-bg custom-form">
+        <h4>Form</h4>
+        <div class="mb-2">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" class="form-control form-control-sm" formControlName="name">
+        </div>
+        <div class="mb-2">
+          <label for="course" class="form-label">Course:</label>
+          <select id="course" class="form-select form-select-sm" formControlName="course">
+            <option value="" disabled selected>Select Course</option>
+            <option value="B.tech">B.tech</option>
+            <option value="M.tech">M.tech</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <button class="btn btn-primary me-2 btn-sm" (click)="submit()">Submit</button>
+          <button class="btn btn-success btn-sm" (click)="generatePDF()">Generate PDF</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
